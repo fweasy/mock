@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #fixed-bar {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        #fixed-bar-wrap {
+            width: 980px;
+            margin: 0 auto;
+            padding: 17px 0;
+            position: relative;
+        }
+
+        .fixed-logo {
+            width: 132px;
+            vertical-align: text-bottom;
+            margin-bottom: 5px;
+        }
+
+        .fixed-logo-h1 {
+            display: inline;
+        }
+
+        section {
+            display: inline-block;
+        }
+
+        #fixed-logo-a {
+            text-decoration: none;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        #fixed-bar-search {
+            position: absolute;
+            left: 150px;
+            top: 17px;
+            border-radius: 4px;
+            border: solid 1px #FF8A3D;
+            text-decoration: none;
+            padding: 1px 8px 1px 14px;
+            height: 40px;
+        }
+
+        .search-input-wrap {
+            position: relative;
+            padding-right: 40px;
+        }
+
+        #header-search-input {
+            width: 440px;
+            height: 38px;
+            border: none;
+            font-size: 18px;
+            color: #212529;
+            margin-right: 6px;
+        }
+
+        button {
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+        }
+
+        .fixed-search-icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 26px;
+            height: 26px;
+            fill: #FF8A3D;
+            padding: 7px 7px;
+        }
+
+        #fixed-bar-download {
+            position: absolute;
+            right: 0;
+            top: 17px;
+        }
+
+        #header-download-button-ios {
+            width: 132px;
+            margin-right: 7px;
+        }
+
+        #header-download-button-android {
+            width: 146px;
+        }
+
+        .fixed-download-button {
+            border-radius: 100px;
+            border: solid 1px #FF8A3D;
+            text-decoration: none;
+            padding: 0;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .fixed-apple-store {
+            fill: #FF8A3D;
+            vertical-align: middle;
+            padding: 11px 0;
+            display: inline-block;
+        }
+
+        .fixed-download-text {
+            display: inline-block;
+            color: #FF8A3D;
+            font-size: 17px;
+            margin-left: 4px;
+            vertical-align: middle;
+        }
+
+        .fixed-google-play {
+            fill: #FF8A3D;
+            vertical-align: middle;
+            padding: 11px 0;
+            display: inline-block;
+        }
+
+        .fixed-bar-box-shadow {
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="fixed-bar" class="fixed-bar-box-shadow">
+        <div id="fixed-bar-wrap">
+            <h1 class="fixed-logo-h1">
+                <a href="/" id="fixed-logo-a">
+                    <span class="sr-only">당근마켓</span>
+                    <img class="fixed-logo" alt="당근마켓" src="/static/logo.svg">
+                </a>
+            </h1>
+            <section id="fixed-bar-search">
+                <div class="search-input-wrap">
+                    <span class="sr-only">검색</span>
+                    <input type="text" name="header-search-input" id="header-search-input" class="fixed-search-input"
+                        placeholder="지역, 상품 등을 검색해보세요.">
+                    <button id="header-search-button">
+                        <img class="fixed-search-icon" alt="Search" src="/static/search.svg">
+                    </button>
+                </div>
+            </section>
+            <section id="fixed-bar-download">
+                <span class="sr-only">다운로드</span>
+                <a target="_blank" class="fixed-download-button" id="header-download-button-ios"
+                    href="https://apps.apple.com/kr/app/pangyojangteo/id1018769995?l=ko&ls=1">
+                    <img class="fixed-apple-store" alt="App Store" src="/static/applestore.svg">
+                    <div class="fixed-download-text">App Store</div>
+                </a>
+                <a target="_blank" class="fixed-download-button" id="header-download-button-android"
+                    href="https://play.google.com/store/apps/details?id=com.towneers.www">
+                    <img class="fixed-google-play" alt="Google Play" src="/static/playstore.svg">
+                    <div class="fixed-download-text">Google Play</div>
+                </a>
+            </section>
+        </div>
+    </header>
+</body>
+
+</html>
